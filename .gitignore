@@ -1,0 +1,45 @@
+Aqui está um `.gitignore` adequado para o seu projeto, cobrindo tanto a parte do **Django** quanto do **React**:
+
+```gitignore
+# Python
+*.pyc
+*.pyo
+__pycache__/
+db.sqlite3
+*.sqlite3
+*.log
+*.pot
+*.pyc
+
+# Django
+*.env
+*.db
+*.log
+*.bak
+*.swp
+*.idea
+*.vscode
+
+# FastAPI
+*.env
+*.db
+*.log
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# VSCode
+.vscode/
+
+# JetBrains
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
