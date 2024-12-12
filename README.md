@@ -110,3 +110,115 @@ Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para ma
 
 ---
 
+# JWT Authentication with Django and FastAPI - React Frontend
+
+## Objective
+
+This project aims to demonstrate the implementation of **JWT (JSON Web Token)** authentication in both **Django** and **FastAPI** backends, with the frontend developed in **React**. The system allows user login, the generation of JWT tokens (`access_token` and `refresh_token`), authentication of protected routes, and the ability to refresh the access token.
+
+---
+
+## Project Architecture
+
+- **Backend**:
+  - **Django** with `djangorestframework-simplejwt` for JWT-based authentication.
+  - **FastAPI** with `fastapi-jwt-auth` for JWT-based authentication.
+  
+- **Frontend**:
+  - **React** for interacting with the API.
+  - **Axios** for backend communication.
+
+---
+
+## Features
+
+1. **Login**: The user sends credentials (username and password) to receive an access token and a refresh token.
+
+2. **Access protected routes**: The user can access protected routes by sending the access token in the HTTP request header.
+
+3. **Token Renewal**: The `refresh_token` is used to renew the `access_token` when it expires.
+
+---
+
+## How to Run the Project
+
+### 1. Backend (Django / FastAPI)
+
+- **Django**:
+  1. Navigate to the Django project directory.
+  2. Install dependencies:
+     ```bash
+     pip install -r requirements.txt
+     ```
+  3. Run migrations:
+     ```bash
+     python manage.py migrate
+     ```
+  4. Start the Django server:
+     ```bash
+     python manage.py runserver
+     ```
+
+- **FastAPI**:
+  1. Navigate to the FastAPI project directory.
+  2. Install dependencies:
+     ```bash
+     pip install -r requirements.txt
+     ```
+  3. Start the FastAPI server:
+     ```bash
+     uvicorn main:app --reload
+     ```
+
+### 2. Frontend (React)
+
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend
+
+2. Install dependencies:
+   ```bash
+    npm install
+
+3. Start the React server:
+   ```bash
+   npm start
+
+The frontend will be available at http://localhost:3000, and the backend will be available at http://localhost:8000 for both Django and FastAPI.
+
+---
+
+Technologies Used
+
+Backend: Django, FastAPI, djangorestframework, djangorestframework-simplejwt, fastapi-jwt-auth
+Frontend: React, Axios
+JWT: JSON Web Tokens for authentication
+
+## Project Structure
+    ├── backend
+    │   ├── django
+    │   │   ├── api
+    │   │   ├── poetry.lock
+    │   │   └── pyproject.toml
+    │   ├── fastapi_project
+    │   └── requirements.txt
+    └── frontend
+        ├── public
+        ├── src
+        ├── package.json
+        └── node_modules
+
+---
+
+## Author
+
+This project was developed to demonstrate the implementation of JWT authentication in Django, FastAPI, and React applications.
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
