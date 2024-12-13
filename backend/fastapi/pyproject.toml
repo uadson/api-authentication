@@ -1,16 +1,16 @@
 [tool.poetry]
-name = "django-api-authentication"
+name = "fastapi-api-authentication"
 version = "0.1.0"
 description = ""
 authors = ["Uadson Feitosa <uadsonpy@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.12,<4.0"
-django = "^5.1.4"
-djangorestframework = "^3.15.2"
-djangorestframework-simplejwt = "^5.3.1"
-django-cors-headers = "^4.6.0"
+python = "^3.12"
+uvicorn = {extras = ["standard"], version = "^0.32.1"}
+fastapi = {extras = ["standard"], version = "^0.115.6"}
+sqlmodel = "^0.0.22"
+sqlalchemy = "^2.0.36"
 
 
 [build-system]

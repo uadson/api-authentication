@@ -8,8 +8,7 @@ function AuthenctionUser(){
     const [ token, setToken ] = useState("")
     const [ message, setMessage ] = useState("")
 
-    const API_URL = "http://127.0.0.1:8010/api/token/" // Django
-    // const API_URL = "http://127.0.0.1:8010/api/token/" // FastAPI
+    const API_URL = "http://127.0.0.1:8000/api/token/" // Django or Django
 
     // Login
     const handleLogin = async (e) => {
@@ -36,7 +35,7 @@ function AuthenctionUser(){
     const handleProtectedRequest = async () => {
         try {
             const access_token = localStorage.getItem("access_token")
-            const response = await axios.get("http://127.0.0.1:8010/api/protected/", {
+            const response = await axios.get("http://127.0.0.1:8000/api/protected/", {
                 headers: {
                     'Authorization': `Bearer ${access_token}`,
                 },
